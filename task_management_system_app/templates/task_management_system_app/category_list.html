@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    /* Styling for a more stylish look */
+    body {
+      background-color: #f5f5f5; /* Light gray background */
+      font-family: Arial, sans-serif; /* Clean, readable font */
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    h2 {
+      color: #333; /* Dark gray heading */
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse; /* Clean table borders */
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd; /* Light table borders */
+    }
+
+    .btn {
+      margin-right: 10px; /* Spacing between buttons */
+    }
+
+    .btn-primary, .btn-info, .btn-danger {
+      /* Consistent button colors */
+      border-color: transparent; /* Remove default button borders */
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Blue primary button */
+    }
+
+    .btn-info {
+      background-color: #17a2b8; /* Light blue info button */
+    }
+
+    .btn-danger {
+      background-color: #dc3545; /* Red danger button */
+    }
+    body {
+  background-image: url('C:\Users\kalyan\OneDrive\Desktop\hi.jpg');
+  background-size: cover;
+}
+
+  </style>
+</head>
+<body>
+  <img src="data:image/jpeg;base64,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" alt="Text description of the image" width="pixels" height="pixels">
+  <div class="container mt-5">
+    <div class="text-center mb-3">
+      <h2>Categories</h2>
+      {% if messages %}
+        <div class="alert alert-dismissible alert-warning fade show" role="alert">
+          {% for message in messages %}
+            <strong>Attention!</strong> {{ message }}
+          {% endfor %}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <a href="{% url 'create_category' %}" class="btn btn-primary mb-3">Create Category</a>  </div>
+      <div class="col-md-6 text-right"> <a href="{% url 'task_chart' %}" class="btn btn-info mb-3">View task Chart</a>  <a href="{% url 'logout' %}" class="btn btn-danger mb-3">Logout</a>  </div>
+    </div>
+
+    <table class="table table-striped"> <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for category in categories %}
+          <tr>
+            <td>
+              <a href="{% url 'category_tasks' category.id %}">{{ category.name }}</a>
+            </td>
+            <td>
+              <form method="post" action="{% url 'delete_category' category.id %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js

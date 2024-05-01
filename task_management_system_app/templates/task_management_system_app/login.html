@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    /* Background animation (optional) */
+    body {
+      background-color: #212529; /* Dark gray background */
+      color: #9f0c0c; /* White text for contrast */
+      animation: animateBackground 15s ease-in-out infinite;
+    }
+
+    @keyframes animateBackground {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+
+    /* Login form styling */
+    .container {
+      padding: 30px;
+    }
+
+    h2 {
+      color: #fff; /* White heading */
+      text-align: center;
+    }
+
+    .login-form {
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 5px; /* Rounded corners */
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #fff; /* White labels */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .btn-primary {
+      background-color: #b8d911; /* Blue primary button */
+      border-color: #f3d809;
+      color: #fff; /* White button text */
+      margin-top: 10px;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9; /* Darker blue on hover */
+    }
+
+    .btn-link {
+      color: #fff; /* White link text */
+    }
+
+    .btn-link:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center"> <div class="col-md-6">
+        <div class="login-form">
+          <h2>Login</h2>
+          <form method="post" class="mb-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+          <p>
+            Don't have an account? <a href="{% url 'register' %}" class="btn btn-link">Register here</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
